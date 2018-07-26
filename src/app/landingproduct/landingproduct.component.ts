@@ -123,6 +123,7 @@ $('nav ul li a').click(function(){
       cart_click(_value){
       this.cart=_value;
       console.log(this.cart=_value);
+
       }
       getProducts(){
         let body:any;
@@ -157,8 +158,8 @@ $('nav ul li a').click(function(){
             
             }
             console.log(body);
-           let SendingObject=JSON.stringify(body); 
-           this.appService.getProductslist(SendingObject).subscribe(Response => {
+            let SendingObject=JSON.stringify(body); 
+            this.appService.getProductslist(SendingObject).subscribe(Response => {
              if(Response)
              {this.productsList =Response.ListProduct;
               console.log(Response);
