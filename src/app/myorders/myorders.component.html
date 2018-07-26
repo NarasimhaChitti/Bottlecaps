@@ -1,0 +1,411 @@
+
+<style>
+  @media only screen and (max-width: 800px) {
+
+table.res_table td:nth-of-type(1):before { content: ""; }
+table.res_table td:nth-of-type(2):before { content: ""; }
+table.res_table td:nth-of-type(3):before { content: ""; }
+table.res_table td:nth-of-type(4):before { content: ""; }
+
+}     
+    </style>
+
+<div class="container">
+    <div class="row">
+  <div class="Search_div col-md-12 col-sm-12 col-lg-12 col-xs-12">
+    <input type="text" placeholder="My Orders">
+    <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+   <li class="breadcrumb-item active"><a href="#">Account</a></li>
+   <li class="breadcrumb-item active"><a href="#">Myorders</a></li>
+  </ol>
+   </div>
+   </div>
+  </div>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class=" border_bottom">
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+          <h5>
+              <span> 
+                  <img src="assets/Images/assets/inprogress.png">
+                </span>
+                <span class="delevary_color"> Delivery in progress </span>
+          </h5>
+        </div>
+
+        <div class="float_right col-md-6 col-sm-6 col-lg-6 col-xs-12">
+            <ol class="breadcrumb">
+               <li class="breadcrumb-item code"><a href="#">#854759512</a></li>
+              </ol>
+          </div>
+      </div>
+
+
+
+      <div class="col-md-10 col-sm-10 col-lg-10 col-xs-12">
+        <table>
+          <!-- <thead>
+            <tr>
+              <th>Product Details</th>
+              <th>Product Price</th>
+              <th>Quantity</th>
+              <th>Total Price</th>
+            </tr>
+          </thead> -->
+          <tbody>
+            <tr>
+              <td>
+
+                <div class="img_div" *ngFor="let myorders of myOrder ">
+                  <img class="second_img" src='{{myorders.image}}' />
+                </div>
+                <div class="Product_name">
+                  <h5>Product Name</h5>
+                  <ul>
+                    <li>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+
+                  </ul>
+                  <span class="font_size">4pk-11oz Btls</span>
+                </div>
+
+
+              </td>
+              <td>
+                <div>
+                  <h5 class="Product_price">$ 3.00</h5>
+                  <div>
+                    <h6 class="you_save">You save 3$</h6>
+                  </div>
+                </div>
+
+              </td>
+              <td>
+                <div>
+                  <h5 class="Product_price"> 4</h5>
+                  <div>
+                    <h6 class="you_save">Quantity </h6>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span class="total_price"> $9.00 </span>
+                  <!-- <button class="bg_black">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button> -->
+                </div>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td>
+
+                <div class="img_div" (click)="recipesClick()">
+                  <img class="second_img" src='assets/Images/Product Page_1.png' />
+                </div>
+                <div class="Product_name">
+                  <h5>Product Name</h5>
+                  <ul>
+                    <li>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+
+                  </ul>
+                  <span class="font_size">4pk-11oz Btls</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <h5 class="Product_price">$ 3.00</h5>
+                  <div>
+                    <h6 class="you_save">You save 3$</h6>
+                  </div>
+                </div>
+
+              </td>
+              <td>
+                <div>
+                  <h5 class="Product_price"> 4</h5>
+                  <div>
+                    <h6 class="you_save">Quantity </h6>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span class="total_price"> $9.00</span>
+                  <!-- <button class="bg_black">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button> -->
+
+                </div>
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+        <!-- <div class="btn_right">
+          <button class="btn btn-default"  (click)="myordersClick()">Pickup</button>
+          <button class="btn btn-default">Delevary</button>
+        </div> -->
+
+      </div>
+      <div class="margin_top_25">
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12"> 
+          <h5>
+              <span>
+                  <img src="assets/Images/assets/recipt-date.png">
+                </span>
+          
+           <span class="date_time"> Jan 20 2017 10 :30 Am</span>
+          </h5>
+      </div>
+
+      <div class="order_total col-md-6 col-sm-6 col-lg-6 col-xs-12"> 
+        <h4>
+          Order Total 
+          <span class="font_color">$18.00</span>
+          <button class="dec_circle">
+              <img src="assets/Images/assets/expand.png">
+          </button>
+        </h4>
+        </div>
+      </div>
+     
+   <!-- Second One -->
+   <div class=" border1_bottom">
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+        
+        <h5>
+            <span>
+                <img src="assets/Images/assets/delivered.png">
+              </span>
+              <span class="deleverd_color"> Delivered</span>
+        </h5>
+      </div>
+
+      <div class="float_right col-md-6 col-sm-6 col-lg-6 col-xs-12">
+          <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="#"> <img src="assets/Images/assets/Reorder.png"></a>
+              </li>
+             <li class="breadcrumb-item code"><a href="#">#854759512</a></li>
+            
+            </ol>
+      
+        </div>
+    </div>
+
+
+
+    <div class="col-md-10 col-sm-10 col-lg-10 col-xs-12">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+
+              <div class="img_div">
+                <img class="second_img" src='assets/Images/Product Page_1.png' />
+              </div>
+              <div class="Product_name">
+                <h5>Product Name</h5>
+                <ul>
+                  <li>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </li>
+
+                </ul>
+                <span class="font_size">4pk-11oz Btls</span>
+              </div>
+
+
+            </td>
+            <td>
+              <div>
+                <h5 class="Product_price">$ 3.00</h5>
+                <div>
+                  <h6 class="you_save">You save 3$</h6>
+                </div>
+              </div>
+
+            </td>
+            <td>
+              <div>
+                <h5 class="Product_price"> 4</h5>
+                <div>
+                  <h6 class="you_save">Quantity </h6>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div>
+                <span class="total_price"> $9.00 </span>
+                <!-- <button class="bg_black">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+              </button> -->
+              </div>
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>
+
+              <div class="img_div">
+                <img class="second_img" src='assets/Images/Product Page_1.png' />
+              </div>
+              <div class="Product_name">
+                <h5>Product Name</h5>
+                <ul>
+                  <li>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </li>
+
+                </ul>
+                <span class="font_size">4pk-11oz Btls</span>
+              </div>
+            </td>
+            <td>
+              <div>
+                <h5 class="Product_price">$ 3.00</h5>
+                <div>
+                  <h6 class="you_save">You save 3$</h6>
+                </div>
+              </div>
+
+            </td>
+            <td>
+              <div>
+                <h5 class="Product_price"> 4</h5>
+                <div>
+                  <h6 class="you_save">Quantity </h6>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div>
+                <span class="total_price"> $9.00</span>
+                <!-- <button class="bg_black">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+              </button> -->
+
+              </div>
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+    <div class="margin_top_25">
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12"> 
+        <h5>
+            <span>
+                <img src="assets/Images/assets/recipt-date.png">
+              </span>
+         Jan 20 2017.
+         <span>10 :30 Am</span>
+        </h5>
+    </div>
+
+    <div class="order_total col-md-6 col-sm-6 col-lg-6 col-xs-12"> 
+      <h4>
+        Order Total 
+        <span class="font_color">$18.00</span>
+        <button class="dec_circle">
+            <img src="assets/Images/assets/collapse.png">
+        </button>
+      </h4>
+      </div>
+    </div>
+
+    <div class="bill_summary col-lg-6 col-md-6 colsm-6 col-xs-12">
+     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+      <h5 class="summary">Summary</h5>
+       </div> 
+       <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+    <table class="text_left">
+      <tbody>
+        <tr>  
+          <td>Sub Total</td>
+          <td>$12.00</td>
+        </tr>
+        <tr>
+          <td>Delevary Free</td>
+          <td>$0.00</td>
+         
+        </tr>
+        <tr>
+          <td>Tip</td>
+          <td>$0.00</td>
+        </tr>
+        <tr>
+          <td>Tax</td>
+          <td>$0.00</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+ </div>
+    </div>
+  </div>
+
+</section>

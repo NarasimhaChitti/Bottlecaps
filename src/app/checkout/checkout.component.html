@@ -1,0 +1,219 @@
+
+<style>
+  @media only screen and (max-width: 700px) {
+
+table.res_table td:nth-of-type(1):before { content: "Your Saved Card"; }
+table.res_table td:nth-of-type(2):before { content: "Name on card"; }
+table.res_table td:nth-of-type(3):before { content: "Expires on"; }
+
+}     
+</style>
+
+<div class="container">
+  <div class="Search_div col-md-12 col-sm-12 col-lg-12 col-xs-12">
+    <input type="text" placeholder="Check Out">
+    <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+   <li class="breadcrumb-item active"><a href="#">Cart</a></li>
+   <li class="breadcrumb-item active"><a href="#">CheckOut</a></li>
+  </ol>
+   </div>
+
+<div class="row">
+ <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12 animated slideInLeft">
+  <h4> Address</h4>
+  <div class="row">
+
+  <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6 new_address">
+    <div class="border_doted">
+      <div class="width_70">
+   <span>My Address(Favorite)</span><br>
+   <small>323 Abc City,State XXXX</small>
+  </div>
+   <img src="assets/Images/assets/selected.png">
+   <h4><a class="edit">Edit</a> <a class="float_right">Change Address</a> </h4>
+  </div>
+
+</div>
+
+  
+    <div class=" col-md-6 col-sm-6 col-lg-6 col-xs-6 new_address">
+     <div class="border_doted_center">
+      <h4><img src="assets/Images/assets/new-address.png"></h4> 
+     <h4>Add New Address</h4>
+    </div>
+  </div>
+  </div>
+ 
+  <div class="deliver">
+    <h5 class="float_left">Deliver as Soon as possible</h5>
+    <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider round"></span>
+      </label>
+      <h6>Schedule Delivary</h6>
+      <div class="">
+      <input type="text" id="datepicker" placeholder="Date" class="datepicker">
+      <img src="assets/Images/assets/date.png"> 
+      <input type="text" id="datepicker" placeholder="Time" class="datepicker">
+      <img src="assets/Images/assets/time.png"> 
+    </div>
+   
+     
+    
+    </div>
+
+ <div id="no-more-tables" class="border_top">
+<h4>Payment Method</h4>
+<table class="table res_table">
+    <thead>
+      <tr>
+        <th>Your Saved Card</th>
+        <th>Name on card</th>
+        <th>Expires on</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border_bottom">
+
+        <td>
+          <div class="">
+            <img class="selected" src='assets/Images/assets/selected.png' />
+            <img class="visa" src='assets/Images/assets/visa.png' />
+            <span>**** **** **** 1234</span><br>
+            <input class="input_right" placeholder="Enter Cvv" type="text">
+          </div> 
+           
+          
+        </td>
+          <td><h5>Product Name</h5></td>
+        <td><h5>06/2019</h5> </td>
+
+      </tr>
+      <tr>
+
+        <td>
+          <div class="visa_cards">
+            <img class="selected" src='assets/Images/assets/selected.png' />
+            <img class="visa" src='assets/Images/assets/visa.png' />
+            <span>**** **** **** 1234</span>
+            
+          </div>
+      
+        </td>
+          <td><h5>Product Name</h5></td>
+        <td><h5>06/2019</h5></td>
+
+      </tr>
+    </tbody>
+
+  </table>
+  
+  <div class="text_center">
+  <h5><a href="#">Add New Payment Mentment</a></h5>
+</div>
+<div class="special_instructions">
+<h5>Special Instructions</h5>
+<textarea placeholder="Please enter notes here (Optional)"></textarea>
+ 
+</div>  
+ </div>
+ </div>
+
+ <div class="bill_summary col-md-6 col-sm-6 col-lg-6 col-xs-12 animated slideInRight">
+    <table class="table text_left">
+      <!-- <thead>
+        <tr>
+          <th>Product Details</th>
+          <th>Product Price</th>
+          <th>Quantity</th>
+          <th>Total Price</th>
+        </tr>
+      </thead> -->
+      <tbody>
+        <tr>
+          <td>
+            <div class="img_div">
+              <img class="second_img" src='assets/Images/Product Page_1.png' />
+            </div>
+          </td>
+          <td>
+              <div class="Product_name">
+                  <h5>Product Name</h5>  
+                  <h5 class="Product_price">$ 3.00</h5>           
+                <span class="font_size">Quantity:3</span>
+                </div>
+          </td>
+          <td>
+              <h5>Edit Order</h5> 
+              <h5 class="Product_price">$ 3.00</h5>    
+          </td>
+
+        </tr>
+
+        <tr>
+            <td>
+              <div class="img_div">
+                <img class="second_img" src='assets/Images/Product Page_1.png' />
+              </div>
+            </td>
+            <td>
+                <div class="Product_name">
+                    <h5>Product Name</h5>  
+                    <h5 class="Product_price">$ 3.00</h5>           
+                  <span class="font_size">Quantity:3</span>
+                  </div>
+            </td>
+            <td>
+                <h5>Edit Order</h5> 
+                <h5 class="Product_price">$ 3.00</h5>    
+            </td>
+  
+          </tr>
+          <tr>
+            <td>
+                <h5 class="summary">Summary</h5>
+            </td>
+            <td class="left_10">
+             <h5 class="summary">SubTotal</h5>
+             <h5>Delevary Free</h5>
+             <img src='assets/Images/assets/add-tip.png'/><h5>Tip</h5>
+             <h5>Tax</h5>
+            
+            </td>
+            <td class="top_10">
+              <h5>$12.00</h5>
+              <h5>$0.00</h5>
+              <h5>$0.00</h5>
+              <h5>$0.00</h5>
+            
+            </td>
+       
+          </tr>
+          <tr class="border_top_bottom">
+            <td></td>
+            <td class="coupon_img">
+               <img src='assets/Images/assets/coupon.png'/> 
+               <h5>Apply Coupon Code</h5></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td></td>
+            <td>$65.00</td>
+          </tr>
+
+      </tbody>
+
+    </table>
+
+    <div>
+      
+    </div>
+
+    
+ </div>
+
+
+
+</div>

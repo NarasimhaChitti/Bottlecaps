@@ -1,0 +1,244 @@
+
+
+.header_div img{
+    width: auto;
+    /* margin-top: 12px; */
+}
+.bg_color .logo_logo{
+    display: none;
+}
+.bg_color.fixed .logo_logo{
+    display: block;
+}
+.bg_color.fixed .logo_logo img{
+    width: auto;
+}
+nav{
+    border: solid #d7d7d7;
+    border-width: 1px 0px 1px 0px;
+}
+.navbar-header button {
+    background-color: #333;
+}
+.navbar-header button:focus{
+    outline: none;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+}
+.navbar-header button span {
+    background-color: #fff;
+}
+.navbar-brand {
+    float: left;
+    padding: 15px 0 15px;
+    font-size: 11px;
+    line-height: 20px;
+}
+ul.float_right {
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 0;
+    /* margin-right: -15px; */
+}
+ul.float_right li {    
+    list-style-type: none;
+    display: inline-block;
+    outline: none;
+}
+
+ul.float_right li a{
+    margin-left: 6px;
+}
+.padding_left {
+    padding-left: 0px;
+}
+.float_right li:first-child{
+    margin-right: 37px;
+}
+ul.float_right li a{
+    /* font-family: Poppins-Bold; */
+    font-family: 'Montserrat', sans-serif !important;
+    color: rgba(236,28,36,255);
+    font-size: 12px;
+    position: relative;
+    bottom: 10px;
+    text-decoration: none;
+}
+.display_none{
+    display: none;
+}
+ul.float_right li img{
+    width: auto;
+    background: #333;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+}
+ul.float_right li span{
+    display: block;
+    margin-top: -9px;
+    color: rgba(186,186,186,255);
+    font-size: 12px;
+    /* font-family: Poppins-SemiBold; */
+    font-family: 'Montserrat', sans-serif !important;
+    margin-left: 46px;
+    
+}
+
+.navbar_main{
+    background-color: #ddd;
+    padding: 5px;
+}
+nav.bg_color{
+    background-color: #fcfcfc;
+}
+.input-group button {
+    background-color: #ec1c24;
+    color: #fff;
+    border-radius: 0;
+    
+}
+nav ul.navbar-nav li a {
+    /* font-family: Raleway-Heavy; */
+    font-family: 'Montserrat', sans-serif !important;
+    color:rgba(25,26,28,255);
+    text-transform: uppercase;
+    font-size: 12px;
+}
+/* .navbar .main_ul li{
+    margin: 0px 10px 0px 0px;
+} */
+
+.input-group{
+    margin-top: 4px;
+}
+.input-group .form-control{
+    width: 83%;
+    height: 34px;
+    border-radius: 0px;
+}
+
+.active {
+    color: #ffffff !important;
+    background-color: #ec1c24 !important;
+    cursor: pointer;
+}
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .navbar-nav>li>a{
+        padding: 10px 6px;
+        font-size: 11px !important;
+    }
+    ul.float_right li a,.float_right li span{
+        font-size: 10px;
+    }
+    .text-block{
+    position: absolute;
+    color: white;
+    bottom: 26px !important;
+    padding-left: 16px;
+    padding-right: 13px;
+    }
+    .text-block imf{
+        width:35px !important;
+    }
+    .navbar-nav{
+        margin-top: 5px;
+    }
+    .input-group{
+        margin-top: -1px;
+    }
+    .input-group .form-control{
+        font-weight: normal;
+    }
+
+}
+
+@media screen and (min-width:320px) and (max-width:767px){
+
+    .navbar-collapse{
+        background-color: #333;
+    }
+
+    .display_none{
+        display: block;
+    }
+    .navbar-nav {
+        margin: 0;
+    }
+    .navbar-collapse ul li a {
+        color: #fff !important;
+    }
+    ul.float_right {
+        float: left;
+        padding-left: 0px;
+    }
+    .padding_left {
+    margin-bottom: 10px !important;
+    }
+
+    ul.float_right li img{
+        width: auto;
+        background: #333;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+    }
+    ul.float_right li a{
+        font-size: 10px;
+    }
+    ul.float_right li a span {
+        margin-top: 0px;
+        font-size: 10px;
+    }
+
+    ul.navbar-right {
+        padding-bottom: 10px;
+    }
+    .input-group{
+        margin: 0 auto !important;
+       text-align: center;
+    }
+    nav ul.navbar-nav{
+        text-align: center;
+    }
+    .footer .footer_image img{
+        width: auto !important;
+      }
+    footer,footer ul {
+        text-align: center;
+    }  
+}
+
+ #menu {
+    background: #fcfcfc;
+    line-height: 38px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    z-index: 2;
+    border-radius: 0;
+    transition: 0.9s;
+    }
+ 
+    .fixed {
+    position: fixed;
+    background: #ec1c24 !important;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    animation: smoothScroll 1s forwards;
+    }
+    .fixed ul{
+    margin-top: 6px;
+    }
+    nav.fixed ul li a{
+    color: #fff;
+    }
+
+    .fixed .input-group button{
+        border: 1px solid #d0d0d0 !important;
+    }
+    

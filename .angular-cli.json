@@ -19,9 +19,17 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "assets/css/sidebar-menu.css",
+        "assets/common.css"
+        
+    
       ],
-      "scripts": [],
+      "scripts": [
+        "assets/js/sidebar-menu.js",
+        "assets/js/smoothscroll.js"
+      
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

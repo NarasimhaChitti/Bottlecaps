@@ -1,0 +1,257 @@
+
+  <section>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          
+          </ol>
+      
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+      
+            <div class="item active">
+              <img src="assets/Images/assets/hero.png" alt="Chania">
+              <div class="carousel-caption">
+                <!-- <h3>Headding Text</h3>
+                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                  text ever since the 1500s</p> -->
+              </div>
+            </div>
+    
+          
+            <div class="item">
+              <img src="assets/Images/assets/hero.png" alt="Flower">
+              <div class="carousel-caption">
+            
+              </div>
+            </div>
+      
+            <div class="item">
+              <img src="assets/Images/assets/hero.png" alt="Flower">
+              <div class="carousel-caption">
+            
+              </div>
+            </div>
+        
+          </div>
+        </div>
+      </section>
+  
+      <div class="container">
+        <div class="row">
+          <div class="product_gallery">
+        
+              <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                        <div class="gallery"(click)="recipedetailclick()">
+                            <img class="main_img" src='assets/Images/assets/beer-bg.png' />
+                            <div class="text-block">
+                                <img src='assets/Images/assets/beer.png' />
+                              <span>Beer</span>
+                            </div>
+                          </div>
+                  </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                  <div class="gallery"(click)="recipedetailclick()">
+                      <img class="main_img" src='assets/Images/assets/liqour-bg.png' />
+                      <div class="text-block">
+                          <img src='assets/Images/assets/liqour.png' />
+                        <span>Liquor</span>
+                      </div>
+                    </div>
+                  </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                  <div class="gallery"(click)="recipedetailclick()">
+                      <img class="main_img" src='assets/Images/assets/wine-bg.png' />
+                      <div class="text-block">
+                          <img src='assets/Images/assets/wine.png' />
+                        <span>Wine</span>
+                      </div>
+                    </div>
+                   
+                  </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                  <div class="gallery"(click)="recipedetailclick()">
+                      <img class="main_img" src='assets/Images/assets/mixers-bg.png' />
+                      <div class="text-block">
+                          <img src='assets/Images/assets/mixers.png' />
+                          <span>mixers & More</span>
+                      </div>
+                     
+                    </div>
+              </div>
+              
+          </div>
+          </div>
+          <div class="row">
+         <!-- <app-sidenavbar></app-sidenavbar>  -->
+         
+          <div class="col-md-3 col-sm-3 col-lg-3 col-xs-12">
+                    <ul class="sidebar-menu">
+                        <li>
+                          <a href="#">
+                            <span>Category Search</span>
+                            <i class="fa fa-angle-down pull-right"></i>
+                          </a>
+                          <ul class="sidebar-submenu">
+                              <li>-- Select --</li>
+                              <li><a (click)="oncatageory(1)">Beer</a></li>
+                              <li><a (click)="oncatageory(2)">Liqour</a></li>
+                              <li><a (click)="oncatageory(3)">Wine</a></li>
+                              <li><a (click)="oncatageory(4)">Mixers & More</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>Type</span>
+                            <i class="fa fa-angle-down pull-right"></i>
+                          </a>
+                          <ul class="sidebar-submenu" style="display: none;">
+                            <li><a href="#"> Top Navigation</a></li>
+                            <li><a href="#"> Boxed</a></li>
+                            <li><a href="#"> Fixed</a></li>
+                            <li class=""><a href="#">Collapsed Sidebar</a>
+                            </li>
+                          </ul>
+                        </li>
+                        
+                        <li>
+                          <a href="#">
+                            <span>Country</span>
+                            <i class="fa fa-angle-down pull-right"></i>
+                          </a>
+                          <ul class="sidebar-submenu">
+                            <li><a href="#"> ChartJS</a></li>
+                            <li><a href="#"> Morris</a></li>
+                            <li><a href="#"> Flot</a></li>
+                          
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>Region</span>
+                            <i class="fa fa-angle-down pull-right"></i>
+                          </a>
+                          <ul class="sidebar-submenu">
+                            <li><a href="#"> General</a></li>
+                            <li><a href="#"> Icons</a></li>
+                            <li><a href="#"> Buttons</a></li>
+                           
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="#">
+                           <span>Price</span>
+                           <i class="fa fa-angle-down pull-right"></i>
+                          </a>
+                          <ul class="sidebar-submenu">
+                            <li><a href="#"> General Elements</a></li>
+                            <li><a href="#">Advanced Elements</a></li>
+                            <li><a href="#"> Editors</a></li>
+                          </ul>
+                        </li>
+                        <li class="clear_search">
+                          <a href="#"><span>Clear Search</span> </a>
+                        </li>
+                      </ul>
+    
+                </div>
+
+
+          <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+              <div class="row">
+              <div class="Searchrelated_noborder col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                      <h4>Featured Products</h4>
+                     </div>
+                     <div class="button_feature col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                    <button class="btn btn-default" (click)="oncatageory()">All</button>
+                    <button class="btn btn-default" (click)="oncatageory(1)">Beer</button>
+                    <button class="btn btn-default" (click)="oncatageory(2)">Liquor</button>
+                    <button class="btn btn-default" (click)="oncatageory(3)">Wine</button>
+                    <button class="btn btn-default" (click)="oncatageory(4)">Mixers & More</button>
+                                 <select #selectedvalue (change)="onChange(selectedvalue)" class="selectBox">
+                                  <option *ngFor="let page of pages" [value]="page">
+                                      {{page}}
+                                  </option>
+                                </select> 
+                  </div>
+                     </div> 
+                     <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" *ngFor="let product of productsList; let i=index">
+                        <div class="img_div" (click)="onProductClick(i)">
+                            <div class="margin_bottom">
+                                <img class="firimg" src="assets/Images/favorites.png">
+                                <img class="second_img" src='assets/Images/Product Page_1.png' />
+                                <img class="third_img" src="assets/Images/cart_icon.png">
+                            </div>
+                            <div class="second_content">
+                                <div class="">
+                                   <p class="price">$.{{product.OfferPrice}}</p>
+                                    <h5>{{product.ProductName}}</h5>
+                                    <p>{{product.ReviewCount}}</p>
+                                    <p class="rating_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star last" aria-hidden="true"></i>
+                                        <span>{{product.Rating}}</span>
+                                    </p>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                    
+
+                    <div class="Main_bottlesection">
+                      <div class="row">
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 item_img circle" *ngFor="let product of productsList; let i=index">
+                              <div class="img_div" (click)="onProductClick(i)">
+                                  <div class="margin_bottom">
+                                      <img  class="firimg" (click)="faverate_click()" src="assets/Images/assets/favorites.png">
+                                      <img class="second_img" src='{{product.ProductImg}}' />
+                                      <img  class="third_img"(click)="cart_click(1)" src="assets/Images/assets/add-cart.png">
+                                  </div>
+                                  <div class="second_content">
+                                          <div class="">
+                                                  <p class="price">$.{{product.OfferPrice}}</p>
+                                                  <h5>{{product.ProductName}}</h5>
+                                                  <p>{{product.size}}</p>
+                                                  <p class="rating_star">
+                                                      <i class="fa fa-star" aria-hidden="true"></i>
+                                                      <i class="fa fa-star" aria-hidden="true"></i>
+                                                      <i class="fa fa-star" aria-hidden="true"></i>
+                                                      <i class="fa fa-star" aria-hidden="true"></i>
+                                                      <i class="fa fa-star last" aria-hidden="true"></i>
+                                                      <span class="first">{{product.Rating}}</span>
+                                                      <span>reviews</span>
+                                                  </p>
+                                                 
+                                          </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                
+
+                
+              </div>
+            </div>
+          </div>
+          <section class="bgr_img">
+              <div class="container">
+             <div class="display_center font_family_Montserrat_Bold col-lg-12 col-lg-ofset-2 col-md-ofset-2 col-md-12 col-sm-12 col-xs-12">
+                <h4>There Is an App for that</h4>
+                <h2>Download our app from Appstore</h2>
+                <a href="#"><img src="assets/Images/assets/ios.png"></a>
+                <a href="#"><img src="assets/Images/assets/android.png"></a>
+          
+             </div>
+            </div>
+          
+          
+           </section>

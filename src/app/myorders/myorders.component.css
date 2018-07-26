@@ -1,0 +1,184 @@
+.cart_image{
+    border:1px solid #d7d7d7;
+    border-radius: 6px;
+}
+.cart_image img{
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+}
+table{
+    width: 100%;
+    text-align: center;
+}
+table tr th {
+    background: #e5e5e5;
+    padding: 10px;
+    border-right: 2px solid #fff;
+    color: #333;
+    text-align: center;
+    font-size: 12px;
+}
+table tr td .img_div{
+    min-width: 30%;
+    max-width: 50%;
+    float: left;
+    border: 1px solid gray;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 35px 25px 0 0;
+}
+table tr td .Product_name{
+    margin-top: 35px;
+}
+.Product_name h5{
+    font-family: 'Montserrat', sans-serif !important;
+    /* font-family: Poppins-SemiBold; */
+    font-size: 15px;
+    color: rgba(38,38,40,255);
+}
+table tr td .img_div img{
+    height: 50px;
+}
+table tr td .total_price{
+  /* font-family: Poppins-SemiBold; */
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 15px;
+  color: rgba(234,28,45,255);
+}
+.Product_price{
+    /* font-family: Poppins-SemiBold; */
+    font-family: 'Montserrat', sans-serif !important;
+    font-size:15px;
+    color: rgba(234,28,45,255);
+}
+.you_save{
+    color:#969696;
+    font: 10px;
+}
+.Product_name ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+.Product_name ul li i{
+    color:#f8c848;
+    font-size: 10px;
+}
+.Product_name .font_size {
+    font-size: 10px;
+}
+button.dec_circle,button.dec_circle:focus{
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    vertical-align: top;
+}
+.margin_top .value{
+    margin: 0 10px 0 10px;
+}
+button.bg_black{
+    border-radius: 50%;
+    background-color: transparent;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    margin-left: 15px;
+    border: 1px solid #333;
+}
+button.bg_black:focus{
+    border: 1px solid #333;
+}
+
+.btn_right{
+    float: right;
+ }
+.btn_right button{
+    background: #ec1c24;
+    color: #fff;
+    font-size: 12px;
+}
+.border_bottom,.border1_bottom {
+    border-bottom: 1px solid #d7d7d7;
+    float: left;
+    width: 100%;
+}
+.float_right .breadcrumb li.code a{
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+}
+
+button.dec_circle,button.dec_circle:focus{
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    vertical-align: top;
+}
+.order_total h4{
+    text-align: right;
+    /* font-family: Poppins-SemiBold; */
+    font-family: 'Montserrat', sans-serif !important;
+    color: rgba(91,91,91,255);
+}
+.order_total span.font_color{
+    color: rgba(234,28,45,255);
+    font-size: 20px;
+}
+.margin_top_25{
+    margin: 25px 0 25px 0;
+    float: left;
+    width: 100%;
+}
+.margin_top_25 .date_time{
+    /* font-family: Poppins-Regular; */
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.border_bottom .delevary_color{
+    /* font-family: Poppins-SemiBold; */
+    font-family: 'Montserrat', sans-serif !important;
+    color: rgba(255,138,0,255);
+    font-size: 15px;
+}
+.border1_bottom .deleverd_color{
+    /* font-family: Poppins-SemiBold; */
+    font-family: 'Montserrat', sans-serif !important;
+    color: rgba(77,187,60,255);
+    font-size: 15px;
+}
+.bill_summary{
+    float: right;
+}
+.bill_summary .text_left{
+    text-align: left;  
+}
+table.text_left tr td{
+    font-size: 11px;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+.bill_summary h5.summary{
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+@media screen and (min-width:320px) and (max-width:767px){
+
+.margin_top_25 .date_time,.order_total h4,.border_bottom .delevary_color,.border1_bottom .deleverd_color,.float_right .breadcrumb li.code a {
+    font-size: 10px;
+}
+
+table tr td .Product_name{
+    margin-top: 0px;
+}
+table tr td .img_div {
+    margin: 5px 0px 0 0; 
+    padding: 10px;
+}
+table tr td h4,table tr td h5,table tr td span,table tr td .total_price{
+    font-size: 10px;
+}
+
+
+}

@@ -1,1 +1,384 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+.Search_div {
+    margin: 15px 0px 40px 0;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0px;
+    overflow: hidden;
+}
+.Search_div input{
+    width: 50%;
+    height: 21px;
+    padding-left: 12px;
+    border: none;
+    float: left;
+    border-left: 5px solid #ec1c24;
+    /* font-family: Raleway-Heavy; */
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 14px;
+    color: rgba(34,34,34,255);
+   
+}
+.Search_div input::placeholder{
+    /* font-family: Raleway-Heavy; */
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 12px;
+    color: rgba(34,34,34,255);
+}
+.Search_div input:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+ol.breadcrumb{
+    float: right;
+    margin: 0;
+    background-color: transparent;
+    font-weight: 500;
+    padding: 0px 15px 15px;
+}
+.breadcrumb li a{
+    color: rgba(85,85,85,255);
+    text-transform: uppercase;
+    font-size: 10px;
+    text-decoration: none;
+    /* font-family: Poppins-Regular; */
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+ #menu {
+    background: #fcfcfc;
+    line-height: 38px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    z-index: 2;
+    border-radius: 0;
+    }
+ 
+    .fixed {
+    position: fixed;
+    background: #ec1c24 !important;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    transition: 0.5s;
+    }
+    .fixed ul{
+    margin-top: 6px;
+    }
+    nav.fixed ul li a{
+    color: #fff;
+    }
+  
+    .fixed .input-group button{
+        border: 1px solid #d0d0d0 !important;
+    }
+
+/* about and landing page */
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    margin: auto;
+}
+.font_size{
+    margin-top: 20px;
+    /* font-family:Poppins-SemiBold; */
+    font-family: 'Montserrat', sans-serif !important;
+    color: rgba(68,68,68,255);
+    font-size: 12px;
+}
+
+.information address{
+word-wrap: break-word;
+}
+.font_family_Montserrat_Bold{
+font-family: Montserrat-Bold !important;
+color: rgba(255,255,255,255) !important;
+}
+.font_family_Montserrat_Bold h4{
+    font-size: 18px;
+    font-family: Montserrat-Bold;
+color: rgba(255,255,255,255);
+}
+
+.font_family_Montserrat_Bold h2{
+    font-family: Montserrat-Bold;
+color: rgba(255,255,255,255);
+    /* font-size: 36px; */
+}
+.font_family_Montserrat-SemiBold h5{
+    font-family: Montserrat-SemiBold;
+    color: rgba(51,51,51,255);
+    font-size:12px;
+}
+.Searchrelated_div{
+    margin: 15px 0px 40px 0;
+    border-radius: 0px;
+    overflow: hidden;   
+    border-bottom: 1px solid #d7d7d7;
+}
+.Searchrelated_div h4{
+    width: 50%;
+    height: 21px;
+    padding-left: 12px;
+    border: none;
+    float: left;
+    border-left: 5px solid #ec1c24;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+   
+}
+section.bgr_img{
+    background-image: url("assets/Images/assets/download-bg.png");
+    background-repeat: no-repeat;
+    height: 300px;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0 10px;
+    background-size: cover;
+}
+.display_center {
+    transform: translateY(20%);
+    text-align: center;
+}
+
+.img_div{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.margin_bottom{
+    border: 2px solid #d7d7d7;
+    min-height: 110px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    height: 120px;
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.margin_bottom:hover{
+    width:100%;
+}
+.margin_bottom .firimg{
+    width: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.margin_bottom .third_img{
+    width: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.margin_bottom img.second_img {
+    width: 35%;
+    height: 110px !important;
+}
+.text-block {
+  
+    color: white;
+    position: absolute;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: center;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+@media screen and (min-width:768px) and (max-width:1024px){
+    .input-group .form-control{
+        font-weight: normal;
+        
+    }
+    .gallery .main_img{
+        width:100%;
+    }
+  
+
+    
+
+}
+
+/* @media only screen and (min-width: 320px) and (max-width: 568px) {
+   .thumbnail .caption p{
+       font-size: 8px;
+   } 
+
+   table tr td .img_div{
+    padding: 11px;
+    margin: 35px 0px 0 0 !important; 
+   }
+   table tr td .img_div img{
+       height: 40px !important;
+   }
+   table tr td .Product_price,table tr td .you_save,table tr td .total_price{
+       font-size: 10px !important;
+   }
+
+} */
+@media screen and (max-width: 767px) {
+
+    ul.float_right li:first-child{
+        margin-right: 0px !important;
+    }
+    ul.float_right li span{
+        font-size: 10px;
+    }
+    table tr th,table tr td {
+        font-size: 10px !important;
+    }
+    table tr td .Product_price,table tr td .you_save,table tr td .total_price{
+        font-size: 10px;
+        font-weight: bold;
+    }
+    /* Force table to not be like tables anymore */
+    #no-more-tables table, #no-more-tables thead, #no-more-tables tbody, #no-more-tables th, #no-more-tables td, #no-more-tables tr {
+        display: block;
+    }
+
+        /* Hide table headers (but not display: none;, for accessibility) */
+        #no-more-tables thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+    #no-more-tables tr {
+        border: 1px solid #ccc;
+    }
+
+    #no-more-tables td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        white-space: normal;
+        text-align: left;
+    }
+
+        #no-more-tables td:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            text-align: left;
+            font-weight: bold;
+        }
+
+    table.res_table td:before {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .gallery .main_img{
+        width:100%;
+    }
+
+  
+    .text-block img{
+        width: 15px;
+    }
+
+    .bgr_img .display_center h4{
+        font-size: 15px;
+    } 
+    .display_center h2.download_app{
+        font-size: 20px;
+    }
+    .display_center {
+       text-align: center;
+    }
+
+    .img_div{
+        margin-right: 10px;
+    }
+    .Product_name h5,table.res_table tr thead th{
+        font-size: 10px !important;
+    }
+    ul.float_right {
+        float: none;
+        padding-left: 0px;
+    }
+   
+    nav ul.navbar-nav{
+        text-align: center;
+    }
+    .footer .footer_image img{
+        width: auto !important;
+      }
+   
+      .Search_div{
+        margin: 10px 0px 0px 0;   
+        padding-bottom: 10px;
+      }
+
+      ol.breadcrumb{
+          float: left;
+          padding-left: 0;
+      }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    /* nav .navbar-nav ul li a{
+        padding: 12px 8px;
+        font-size: 9px !important ;   
+    } 
+    .product_gallery .gallery img.main_img{
+        width: 100%;
+       }
+     
+       .margin_bottom{
+        min-height: 110px;
+        height: 110px !important;
+       }
+       .img_div .second_content{
+        min-height: 80px;
+        height: 80px;  
+    }
+     
+    .margin_bottom .firimg {
+        width: 25px;
+        margin-right: 15px;
+    }
+    .margin_bottom .third_img{
+        width: 25px;
+        margin-left: 15px;
+    }
+    .margin_bottom img.second_img {
+        width: 35%;
+        height: 95px !important;
+    }
+   
+    .text-block {
+        position: absolute;
+        bottom: 30px !important;
+        color: white;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .text-block img{
+        width: 35px;
+    }
+    /* .text-block span:nth-last-child(1){
+        margin-left: 0px !important;
+        padding: 0px !important;
+    }  */
+    /* 
+
+    .img_div .second_content {
+        min-height: 100px;
+        height: auto;
+    }  */
+
+    
+
+    }

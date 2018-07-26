@@ -1,0 +1,79 @@
+/* section .carousel ol{
+    z-index: 1;
+} */
+.circle img {
+    transition: 1s ease;
+    }
+    
+    .circle:hover {
+    transform: scale(1.1);
+    transition: .5s all;
+    }
+.product_gallery {
+    margin: 30px 0 30px 0;
+    float: left;
+    width: 100%;
+}
+.Searchrelated_noborder h4{
+    width: 50%;
+    height: 33px;
+    padding-left: 12px;
+    border: none;
+    float: left;
+    border-left: 5px solid #ec1c24;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+   
+}
+.button_feature button{
+    border-radius: 20px;
+    font-size: 11px;
+}
+.button_feature button:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+/* .active {
+    color: #ffffff !important;
+    background-color: #ec1c24 !important;
+    cursor: pointer;
+} */
+
+
+.gallery {
+    position: relative
+}
+
+
+.text-block span {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 10px;
+}
+
+
+select.selectBox{
+    width: 50px;
+    height: 28px;
+    outline:none;
+    border:1px solid #d7d7d7;
+    border-radius:25px;
+}
+select.selectBox > option{
+    height: 50px;
+}
+@media screen and (max-width:768px){
+    .button_feature {
+        margin-bottom: 10px;
+    }
+    .button_feature .btn{
+    padding: 6px 6px;
+    }
+}
+@media screen and (min-width:320px) and (max-width:530px){
+    .item_img{
+        width: 100%;
+    }
+}
+
