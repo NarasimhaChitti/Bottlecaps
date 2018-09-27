@@ -27,8 +27,8 @@
       ],
       "scripts": [
         "assets/js/sidebar-menu.js",
-        "assets/js/smoothscroll.js"
-      
+        "assets/js/smoothscroll.js",
+        "assets/js/wow.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

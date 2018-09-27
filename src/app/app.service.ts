@@ -1,12 +1,93 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import { Http, Response, Headers, RequestMethod, ResponseContentType } from '@angular/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class AppService {
 
-  constructor(private httpclient:HttpClient) { }
-  getProductslist(object){
-    let headers = new HttpHeaders().set('Content-Type', 'application/json');
-    return this.httpclient.post<any>('https://staging.liquorapps.com/Bcapi/api/Product/ProductGetList',object,{headers:headers});
-    }
-}
+  constructor(private http:HttpClient) { }
+  
+  postdetails(url:string,userData:any)
+          {
+            
+           return this.http.post(url,userData).map((response:Response)=>
+         {
+         return response;
+         
+         }).catch((error:Response)=>
+         {
+           return Observable.throw(error);
+          });
+         }
+  
+   getdetails(url:string)
+   {
+      return this.http.get(url)
+       .map((response:Response)=>
+       {
+        
+        return response;
+              
+              }).catch((error: Response)=>{
+         
+                 return Observable.throw(error);
+              });
+           
+             }
+          
+   updateDetails(url:string,body:any)
+             {
+              
+               return this.http.put(url,body)
+               .map((response : Response)=>
+             {
+               return response;
+             });
+             }
+  
+   deleteDetails(url:string)
+             {
+              
+               return this.http.delete(url)
+               .map((response : Response)=>
+             {
+               return response;
+             });
+             }
+  
+  }
+
+
+
+
+//   getProductslist(object){
+//     let headers = new HttpHeaders().set('Content-Type', 'application/json');
+//     return this.httpclient.post<any>('https://staging.liquorapps.com/Bcapi/api/Product/ProductGetList',object,{headers:headers});
+//     }
+
+//   storeGetHome(object)
+//   {
+//     let headers = new HttpHeaders().set('Content-Type', 'application/json');
+//     return this.httpclient.post<any>('https://staging.liquorapps.com/Bcapi/api/Store/StoreGetHome',object,{headers:headers});
+//   }
+  
+ 
+//   recipesGetlist(object)
+//   {
+//     let headers = new HttpHeaders().set('Content-Type', 'application/json');
+//     return this.httpclient.post<any>('https://staging.liquorapps.com/Bcapi/api/Recipe/RecipeGetList',object,{headers:headers});
+//   }
+
+//   recipesDetailslist(object)
+//   {
+//     let headers = new HttpHeaders().set('Content-Type', 'application/json');
+//     return this.httpclient.post<any>('https://staging.liquorapps.com/Bcapi/api/Recipe/RecipeGetDetail',object,{headers:headers});
+//   }
+
+//   address(object)
+//   {
+//     let headers = new HttpHeaders().set('Content-Type', 'application/json');
+//     return this.httpclient.post<any>('https://staging.liquorapps.com/Bcapi/api/Customer/AddressInsert',object,{headers:headers});
+//   }
+// }

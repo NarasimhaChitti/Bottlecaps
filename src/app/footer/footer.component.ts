@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AppService } from '../app.service';
+import { HttpClient } from '@angular/common/http';
+import{Router, ActivatedRoute} from '@angular/router';
+import *as global from '../global';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -9,11 +12,23 @@ export class FooterComponent implements OnInit {
   Accountname:any;
   Information:any;
   About:any;
-  constructor() { 
+  userid: any;
+  sessionid: any;
+  storegetList: any;
+  storefilters: any;
+  productsList: any;
+  CategoryId: any;
+
+  constructor(private activatedRoute:ActivatedRoute,private router:Router, private appService : AppService,private httpclient:HttpClient) {
+    this.userid = localStorage.getItem('UserId');
+    this.sessionid = localStorage.getItem('SessionId');
+    this.router.routeReuseStrategy.shouldReuseRoute = function() {
+      return false;
+  };
     this.Accountname=[
-      {name:'My Oreders'},
-      {name:'My Payment methods'},
-      {name:'My Addresses'},
+      {name:'My Orders'},
+      {name:'My Payment method'},
+      {name:'My Address'},
       {name:'My Personal Info'}
     
     ];
@@ -29,16 +44,68 @@ export class FooterComponent implements OnInit {
     ];
     
     this.About=[
-      {name:'Link Goes here'},
-      {name:'Link Goes here'},
-      {name:'Link Goes here'},
-      {name:'Link Goes here'},
-      {name:'Link Goes here'},
+      {name:'About'},
       {name:'Contact Us'}
     ];
-  }
+  
+
+   }
+    
 
   ngOnInit() {
+   
+     this.footercontent();
+
+     $('.clear-margins li').click(function() {
+      $(this).addClass('active').siblings().removeClass('active');
+    });
+
+  // Place Holder
+$('#myid').data('holder',$('#myid').attr('placeholder'));
+
+$('#myid').focusin(function(){
+    $(this).attr('placeholder','');
+});
+$('#myid').focusout(function(){
+    $(this).attr('placeholder',$(this).data('holder'));
+});
+
+
+$('.clear-margins li').click(function () {
+  $('.clear-margins li a.active').removeClass('active');
+  $(this).find("a").addClass('active');
+});
+  
   }
+      Gotoproduct(id){
+       this.router.navigate(['home/'], { queryParams: { id: id,value:""} });  
+      }
+      
+footercontent(){
+
+  let StoreObject:any;
+  StoreObject = {	
+  StoreId: 10002,	
+  SessionId:this.sessionid,
+  UserId:this.userid,	
+  AppId:10002,	
+  IsFeatureProduct:false	
+  }	
+
+  console.log(StoreObject);
+   this.appService.postdetails(global.baseUrl+'Store/StoreGetHome',StoreObject)
+   .subscribe(Response => {
+     if(Response)
+     {
+       this.storegetList=Response;
+   
+      console.log(this.storegetList);
+    }
+    else{
+     alert("something went wrong at server");
+    }
+
+  });
+}
 
 }

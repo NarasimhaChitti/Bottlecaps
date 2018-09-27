@@ -15,38 +15,138 @@ ul li.star_color i.fa-star{
     width: 100%;
 }
 .margin_top{
-    /* margin:7px; */
-    /* font-family: Poppins-Bold; */
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 15px;
-    color: rgba(25,25,25,255);
+    font-family: Poppinsbold;
+    font-size: 30px;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #191919;
 }
 .email{
-    /* font-family: Montserrat-Light; */
-    font-family: 'Montserrat', sans-serif !important;
-    font-size:14px;
-    color: rgba(25,25,25,255);
+    font-family: Montserratregular;
+    font-size: 18px;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #191919;
 }
-.float_right h4{
+.float_right button{
     float: right;
+    background-color: transparent;
+}
+.float_right button:active,.float_right button:focus{
+    background-color: transparent;
+outline: none;
 }
 ul.sidebar-menu img{
     height: 15px;
     margin-right: 10px;
 }
 ul.sidebar-menu li a{
-    /* font-family: Raleway-Heavy; */
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 11px;
-    color: rgba(34,34,34,255);
+    text-transform: uppercase;
+}
+ul.sidebar-menu li a,ul.sidebar-menu li ul.sidebar-submenu li a{
+    font-family: poppinsbold;
+    font-size: 14px;
+    font-stretch: normal;
+    line-height: 1.86;
+    letter-spacing: 0.3px;
+    text-align: left;
+    color: #222222 !important;
+    padding: 12px 5px 12px 15px;
+    display: block;
+  
 }
 ul.sidebar-menu li ul.sidebar-submenu li a{
-    /* font-family: Raleway-Heavy; */
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 11px;
-    color: rgba(239,58,65,255); 
-    padding: 0px 5px 7px 15px;
+    font-family: poppinsbold;
+    font-size: 12px;
+    text-transform: capitalize;
 }
+
+table.width_100{
+    width: 100%;
+}
+table.width_100 thead.payment_method{
+    /* opacity: 0.03; */
+    background-color: #f6f6f6 !important;
+}
+thead.payment_method tr th h5{
+ font-family: montserratregular;
+  font-size: 15px;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ea1c2d !important;  
+}
+ul.sidebar-menu li:focus{
+box-shadow: none;
+outline: none !important;
+}
+table.width_100 thead th{
+    padding: 10px;
+}
+table.width_100 tr td{
+    padding: 30px 20px 20px 5px;
+}
+
+.mobile_number{
+    font-family: Poppinsbold;
+  font-size: 12px;
+  font-stretch: normal;
+  line-height: 2.17;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #555555;
+  text-transform: uppercase;
+}
+.contact{
+    font-family: Poppinsregular;
+    font-size: 18px;
+    font-stretch: normal;
+    line-height: 1.44;
+    letter-spacing: 0.4px;
+    text-align: left;
+    color: #222222;
+    text-transform: uppercase;
+}
+button.btn{
+    font-family: Poppinsbold;
+    font-size: 14px;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #191919; 
+    
+}
+.card_number{
+    font-family: montserratregular;
+    font-size: 18px;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #262628;
+}
+.address{
+    font-family: Montserratbold;
+    font-size: 18px;
+}
+.address,.city_state{
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #262628;
+}
+.city_state{
+    font-family: Montserratregular;
+    font-size: 16px;
+}
+
 @media screen and (min-width:320px) and (max-width:767px){
 
 ul.sidebar-menu,.border_bottom {
@@ -62,3 +162,11 @@ ul.sidebar-menu,.border_bottom {
 
 
 }
+
+@media screen and (min-width:320px) and (max-width:500px){
+    .profile,.float_right{
+        width:100%;
+    }
+    
+}
+

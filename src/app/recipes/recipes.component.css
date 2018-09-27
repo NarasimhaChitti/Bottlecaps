@@ -1,4 +1,4 @@
-.gallery img{
+.recipes img{
     height: 100px;
     margin: 0 auto;
     display: block;
@@ -7,6 +7,22 @@
 
 .thumbnail{
     padding: 0;
+    height: auto;
+    min-height: 195px;
+ 
+}
+.thumbnail:hover{
+    cursor: pointer;
+}
+
+.thumbnail .caption .text_center{
+    font-family: montserratbold !important;
+    font-size: 12px;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #262628;
 }
 .details_content h4{
     border-bottom: 1px solid #d7d7d7;
@@ -28,6 +44,18 @@
     font-weight: bold;
     color: #333;
    
+}
+.thumbnail a{
+    display: block;
+    max-height: 180px;
+    overflow: hidden;
+}
+.thumbnail a img{
+    max-width: 352px;
+    display: block;
+    margin: auto;
+    height: 140px;
+    width: 100%;
 }
 
 .item_img:hover{

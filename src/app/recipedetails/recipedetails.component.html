@@ -1,44 +1,28 @@
+
+<ng4-loading-spinner [threshold]="2000" [timeout]="4000" [template]="template"  style= "margin:0 auto; text-align: center;"[zIndex]="9999"></ng4-loading-spinner>
 <section>
-  <div class="container">
+  <div class="container" >
    
       <div class="Search_div ">
         <input type="text" placeholder="Recipe Details">
         <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-       <li class="breadcrumb-item active"><a href="#">Recipes</a></li>
-       <li class="breadcrumb-item active"><a href="#">Recipe Details</a></li>
+        <li class="breadcrumb-item"><a (click)="gottoHome()">Home</a></li>
+       <li class="breadcrumb-item active"><a (click)="gotorecipes()">Recipes</a></li>
+       <li class="breadcrumb-item active"><a>Recipe Details</a></li>
       </ol>
        </div>
 
-       <div class="details_img col-md-6 col-sm-6 col-lg-6 col-xs-12" (click)="myaccountclick()">
-        <img src='assets/Images/assets/beer-bg.png' />
+       <div class="details_img col-md-6 col-sm-6 col-lg-6 col-xs-12 animated fadeInLeft">
+        <img src='{{recipesdetails.ThumbNailImage}}' />
        </div>
 
-       <div class="details_content col-md-6 col-sm-6 col-lg-6 col-xs-12">
-              <h4 class="recipe_name">Recipe Name</h4>
+       <div class="details_content col-md-6 col-sm-6 col-lg-6 col-xs-12 animated fadeInRight">
+        <h4 class="recipe_name">{{recipesdetails.Title}}</h4>
        <ul>
-         <li><h4 class="recipe_name">Ingredients</h4></li>
-         <li>
-          <p><i class="fa fa-arrow-right" aria-hidden="true"></i> 
-            Lorem ipsum donec id elit non mi porta gravida at eget metus</p>
+         <h4 class="ingredients">Ingredients</h4>
+         <li class="IngredientText" [innerHTML]=recipesdetails.IngredientText> 
          </li>
-         <li>
-          <p>
-              <i class="fa fa-arrow-right" aria-hidden="true"></i> 
-            Lorem ipsum donec id elit non mi porta gravida at eget metus</p>
-         </li>
-         <li>
-          <p> <i class="fa fa-arrow-right" aria-hidden="true"></i> 
-            Lorem ipsum donec id elit non mi porta gravida at eget metus</p>
-         </li>
-         <li>
-          <p><i class="fa fa-arrow-right" aria-hidden="true"></i>
-            Lorem ipsum donec id elit non mi porta gravida at eget metus</p>
-         </li>
-         <li>
-          <p><i class="fa fa-arrow-right" aria-hidden="true"></i> 
-            Lorem ipsum donec id elit non mi porta gravida at eget metus</p>
-         </li>
+         
        </ul>
        </div>
    
@@ -47,23 +31,5 @@
         <h4>Instructions</h4>
        </div>
       
-       <p> Lorem ipsum donec id elit non mi porta gravida at 
-         eget metus Lorem ipsum donec id elit non mi porta gravida 
-         at eget metus Lorem ipsum donec id elit non mi porta gravida 
-         at eget metus Lorem ipsum donec id elit non mi porta gravida
-          at eget metus Lorem ipsum donec id elit non mi porta gravida at eget metus Lorem ipsum donec id
-          elit non mi porta gravida at eget metus</p>
-
-
-          <p> <p> Lorem ipsum donec id elit non mi porta gravida at 
-              eget metus Lorem ipsum donec id elit non mi porta gravida 
-              at eget metus Lorem ipsum donec id elit non mi porta gravida 
-              at eget metus Lorem ipsum donec id elit non mi porta gravida
-               at eget metus Lorem ipsum donec id elit non mi porta gravida at eget metus Lorem ipsum donec id
-               elit non mi porta gravida at eget metus</p><p> Lorem ipsum donec id elit non mi porta gravida at 
-                  eget metus Lorem ipsum donec id elit non mi porta gravida 
-                  at eget metus Lorem ipsum donec id elit non mi porta gravida 
-                  at eget metus Lorem ipsum donec id elit non mi porta gravida
-                   at eget metus Lorem ipsum donec id elit non mi porta gravida at eget metus Lorem ipsum donec id
-                   elit non mi porta gravida at eget metus</p>
+       <div [innerHTML]=recipesdetails.InstructionText class="instruction_text"> </div>
        </div>

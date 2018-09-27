@@ -8,42 +8,54 @@ table.res_table td:nth-of-type(3):before { content: "Expires on"; }
 
 }     
 </style>
-
+<ng4-loading-spinner [threshold]="2000" [timeout]="4000" [template]="template"  style= "margin:0 auto; text-align: center;"[zIndex]="9999"></ng4-loading-spinner>
 <div class="container">
   <div class="Search_div col-md-12 col-sm-12 col-lg-12 col-xs-12">
     <input type="text" placeholder="Check Out">
     <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-   <li class="breadcrumb-item active"><a href="#">Cart</a></li>
-   <li class="breadcrumb-item active"><a href="#">CheckOut</a></li>
+    <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+   <li class="breadcrumb-item active"><a [routerLink]="['/cart']">Cart</a></li>
+   <li class="breadcrumb-item active"><a>CheckOut</a></li>
   </ol>
    </div>
 
 <div class="row">
  <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12 animated slideInLeft">
+  <div #dtype id="dtype" style="display: none;">
   <h4> Address</h4>
   <div class="row">
 
   <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6 new_address">
+    
+   
     <div class="border_doted">
+        <ng-container *ngFor="let address of addressgetlist">
       <div class="width_70">
-   <span>My Address(Favorite)</span><br>
-   <small>323 Abc City,State XXXX</small>
+      <ng-container *ngIf="address.IsDefault==true"> 
+   <span>{{address.Address1}}</span><br>
+   <small>{{address.City}},{{address.State}} {{address.Zip}}</small>
+  </ng-container> 
   </div>
+ 
+</ng-container>
    <img src="assets/Images/assets/selected.png">
-   <h4><a class="edit">Edit</a> <a class="float_right">Change Address</a> </h4>
+   <h4><a class="edit">Edit</a> <a class="float_right" (click)="gotoaddress(2)">Change Address</a> </h4>
   </div>
+
 
 </div>
 
   
     <div class=" col-md-6 col-sm-6 col-lg-6 col-xs-6 new_address">
-     <div class="border_doted_center">
+     
+     <div class="border_doted_center" (click)="addnewaddress()">
       <h4><img src="assets/Images/assets/new-address.png"></h4> 
      <h4>Add New Address</h4>
     </div>
+
   </div>
   </div>
+
  
   <div class="deliver">
     <h5 class="float_left">Deliver as Soon as possible</h5>
@@ -52,17 +64,15 @@ table.res_table td:nth-of-type(3):before { content: "Expires on"; }
         <span class="slider round"></span>
       </label>
       <h6>Schedule Delivary</h6>
-      <div class="">
+      <div class="date_time">
       <input type="text" id="datepicker" placeholder="Date" class="datepicker">
-      <img src="assets/Images/assets/date.png"> 
-      <input type="text" id="datepicker" placeholder="Time" class="datepicker">
-      <img src="assets/Images/assets/time.png"> 
+      <img class="date_img" src="assets/Images/assets/date.png"> 
+      <input type="text" placeholder="Time" class="datepicker">
+      <img class="time_img" src="assets/Images/assets/time.png"> 
     </div>
-   
-     
-    
     </div>
 
+  </div>
  <div id="no-more-tables" class="border_top">
 <h4>Payment Method</h4>
 <table class="table res_table">
@@ -80,9 +90,11 @@ table.res_table td:nth-of-type(3):before { content: "Expires on"; }
           <div class="">
             <img class="selected" src='assets/Images/assets/selected.png' />
             <img class="visa" src='assets/Images/assets/visa.png' />
-            <span>**** **** **** 1234</span><br>
-            <input class="input_right" placeholder="Enter Cvv" type="text">
+            <span>**** **** **** 1234</span>
           </div> 
+          <div>
+              <input class="input_right" placeholder="Enter Cvv" type="text">
+          </div>
            
           
         </td>
@@ -131,64 +143,51 @@ table.res_table td:nth-of-type(3):before { content: "Expires on"; }
         </tr>
       </thead> -->
       <tbody>
-        <tr>
+  
+        <tr *ngFor="let cartdetail of cartdetails">
           <td>
             <div class="img_div">
-              <img class="second_img" src='assets/Images/Product Page_1.png' />
+              <!-- <img class="second_img" src='assets/Images/Product Page_1.png' /> -->
+              <img class="second_img" src='{{cartdetail.ProductImage}}' />
             </div>
           </td>
           <td>
               <div class="Product_name">
-                  <h5>Product Name</h5>  
-                  <h5 class="Product_price">$ 3.00</h5>           
-                <span class="font_size">Quantity:3</span>
+                  <h5>{{cartdetail.ProductName}}</h5>  
+                  <h5 class="Product_price">{{cartdetail.PriceDisplay}}</h5>           
+                <span class="font_size">Quantity:{{cartdetail.QuantityOrdered}}</span>
                 </div>
           </td>
           <td>
               <h5>Edit Order</h5> 
-              <h5 class="Product_price">$ 3.00</h5>    
+              <h5 class="Product_price">{{cartdetail.ItemTotalDisplay}}</h5>    
           </td>
 
         </tr>
 
-        <tr>
-            <td>
-              <div class="img_div">
-                <img class="second_img" src='assets/Images/Product Page_1.png' />
-              </div>
-            </td>
-            <td>
-                <div class="Product_name">
-                    <h5>Product Name</h5>  
-                    <h5 class="Product_price">$ 3.00</h5>           
-                  <span class="font_size">Quantity:3</span>
-                  </div>
-            </td>
-            <td>
-                <h5>Edit Order</h5> 
-                <h5 class="Product_price">$ 3.00</h5>    
-            </td>
-  
-          </tr>
+      
           <tr>
+           
             <td>
                 <h5 class="summary">Summary</h5>
             </td>
+            <ng-container *ngFor="let charge of charges">
             <td class="left_10">
              <h5 class="summary">SubTotal</h5>
              <h5>Delevary Free</h5>
-             <img src='assets/Images/assets/add-tip.png'/><h5>Tip</h5>
-             <h5>Tax</h5>
-            
+           
+             <img src='assets/Images/assets/add-tip.png'/><h5>{{charge.ChargeTitle}}</h5>
+             <h5>{{charge.ChargeTitle}}</h5>
+           
             </td>
-            <td class="top_10">
-              <h5>$12.00</h5>
-              <h5>$0.00</h5>
-              <h5>$0.00</h5>
-              <h5>$0.00</h5>
+            <!-- <td class="top_10">
+              <h5>{{subdata.SubTotalDisplay}}</h5>
+              <h5>{{subdata.ChargeAmountDisplay}}</h5>
+              <h5>{{subdata.ChargeAmountDisplay}}</h5>
+              <h5>{{subdata.ItemTotalDisplay}}</h5>
             
-            </td>
-       
+            </td> -->
+          </ng-container>
           </tr>
           <tr class="border_top_bottom">
             <td></td>
@@ -207,10 +206,11 @@ table.res_table td:nth-of-type(3):before { content: "Expires on"; }
 
     </table>
 
-    <div>
-      
-    </div>
-
+   
+<div class="checkout_button">
+  <button class="btn btn-default cancel">Cancel</button>
+  <button class="btn btn-default checkout">Checkout</button>
+</div>
     
  </div>
 

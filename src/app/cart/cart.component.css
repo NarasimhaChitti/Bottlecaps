@@ -15,11 +15,14 @@ table tr th {
     background: #e5e5e5;
     padding: 10px;
     border-right: 2px solid #fff;
-    text-align: center;
-    font-size: 13px;
-    /* font-family: Poppins-Bold; */
-    font-family: 'Montserrat', sans-serif !important;
-    color: rgba(34,34,34,255);
+    font-family: poppinsbold;
+    font-size: 12px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.29;
+    letter-spacing: 0.1px;
+     text-align: center; 
+    color: #222222;
 }
 table tr th:last-child{
     border-right:none; 
@@ -31,50 +34,73 @@ table tr td .img_div{
     border: 1px solid gray;
     padding: 15px;
     border-radius: 4px;
+    height: 100px;
    
 }
 
 .Product_name h5{
-    font-family: 'Montserrat', sans-serif !important;
-    /* font-family: Poppins-SemiBold; */
-    font-size: 15px;
-    color: rgba(38,38,40,255);
+    font-family: poppinsbold;
+    font-size: 20px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.5px;
+    text-align: center; 
+    color: #262628;
 }
 table tr td .img_div img{
     height: 50px;
+    width: auto;
+    max-width: 66px;
+    margin: 0 auto;
+    display: block;
 }
 table tr td .total_price{
-    /* font-family: Poppins-SemiBold; */
-    font-family: 'Montserrat', sans-serif !important;
-    /* font-size: 36.26667px; */
-    font-size: 15px;
-    color: rgba(234,28,45,255);
+    font-family: poppinsbold;
+    font-size: 24px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #ea1c2d;
 }
 table tr td .Product_price{
-    /* font-family: Poppins-SemiBold; */
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 15px;
-    color: rgba(241,27,46,255);
+    font-family: poppinsbold;
+    font-size: 18px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #f11b2e;
 }
 .you_save{
-    /* font-family: Poppins-SemiBold; */
-    font-family: 'Montserrat', sans-serif !important;
-    color: rgba(38,38,40,255);
-    font-size: 15px;
+    opacity: 0.6;
+  font-family: poppinsbold;
+  font-size: 12px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgba(38, 38, 40, 0.6);
 }
 .Product_name ul li {
     list-style-type: none;
     display: inline-block;
 }
-.Product_name ul li i{
+/* .Product_name ul li i{
     color:#f8c848;
     font-size: 10px;
-}
+} */
 .Product_name .font_size {
-    /* font-family: Roboto-Black; */
-    font-family: 'Montserrat', sans-serif !important;
-    color: rgba(119,119,119,255);
-    font-size: 11.36679px;
+    font-family: poppinsbold;
+    font-size: 10px;
+    line-height: 2.11;
+    letter-spacing: 0.3px;
+    text-align: left;
+    color: #777777;
 }
 button.dec_circle,button.dec_circle:focus{
     border-radius: 50%;
@@ -87,10 +113,12 @@ button.dec_circle,button.dec_circle:focus{
 }
 .margin_top .value{
     margin: 0 10px 0 10px;
-    /* font-family: Poppins-SemiBold; */
-    font-family: 'Montserrat', sans-serif !important;
-    color: rgba(34,31,31,255);
-    font-size: 14px;
+    font-family: poppinsbold;
+    font-size: 12.7px;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #221f1f;
 }
 button.bg_black {
     border: 0;
@@ -110,15 +138,29 @@ button.bg_black:focus{
  }
 .btn_right button{
     background: #ec1c24;
-    color: rgba(255,255,255,255);
-    font-size: 14px;
-    font-family: Montserrat-Bold;
+    font-family: montserratbold;
+    font-size: 11.2px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    width: 131px;
+    text-align: center;
+    padding: 15px 0 15px; 
+    border:#ec1c24;
+    box-shadow: none;
 }
-
+.btn_right button:focus{
+    border:#ec1c24;
+    outline: none;
+    box-shadow: none;
+}
 .Search_div input, .Search_div input::placeholder{
     color:rgba(25,25,25,255);
     /* font-family: Poppins-SemiBold; */
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: montserratbold!important;
     font-size: 20px;
 }
 .Search_div input:focus{
@@ -182,10 +224,14 @@ table.res_table td:before {
  font-size: 12px;
 }
 
-
 table tr td .Product_price,table tr td .you_save,table tr td .total_price{
-    font-size: 10px;
-    font-weight: bold;
+    font-family: poppinsbold;
+    font-size: 18px;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #f11b2e;
 }
 
 

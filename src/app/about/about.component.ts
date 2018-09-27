@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
+import { HttpClient } from '@angular/common/http';
+import{Router} from '@angular/router';
+import *as global from '../global';
+import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
 @Component({
   selector: 'app-about',
@@ -6,47 +11,50 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+  storegetList: any;
+  storegetpicktime: any;
+  storegetdeliverytime: any;
+  userid: string;
+  sessionid: string;
+  template: string =`<img src="/assets/Images/assets/loading_icon.gif" />`
 
-  constructor() { }
-
+  constructor(private spinnerService:Ng4LoadingSpinnerService,private router:Router, private appService : AppService,private httpclient:HttpClient) { }
+ 
   ngOnInit() {
 
-var unescape =unescape;
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-25854704-1']);
-_gaq.push(['_setDomainName', '.wowslider.com']);
-_gaq.push(['_setAllowLinker', true]);
-_gaq.push(['_setAllowHash', false]);
-if(document.cookie.match("(^|;\\s)__utma") && !/utmcsr=\(direct\)/.test(unescape(document.cookie))) {
-    _gaq.push(
-      ['_setReferrerOverride', ''],
-      ['_setCampNameKey', 'aaan'], 
-      ['_setCampMediumKey', 'aaam'], 
-      ['_setCampSourceKey', 'aaas'], 
-      ['_setCampTermKey', 'aaat'], 
-      ['_setCampContentKey', 'aaac'], 
-      ['_setCampCIdKey', 'aaaci']
-    )
-}
+    this.userid = localStorage.getItem('UserId');
+    this.sessionid = localStorage.getItem('SessionId');
 
-_gaq.push(['_trackPageview']);  
+  let StoreGetDeatile:any;
+  StoreGetDeatile = {	
+    StoreId:10002,
+    UserId:this.userid,
+    SessionId:this.sessionid,
+    AppId:10002
+    }	
+    this.spinnerService.show(); 
+    //console.log(StoreGetDeatile);
+     this.appService.postdetails(global.baseUrl+'Store/StoreGetDetail',StoreGetDeatile)
+     .subscribe(Response => {
+       if(Response)
+       {
+         this.storegetList =Response.GetStoredetails;
+         this.storegetpicktime =Response.GetStoredetails.ListStoreTime;
+         this.storegetdeliverytime =Response.GetStoredetails.ListStoreTimeDelivery;
+         this.spinnerService.hide(); 
+        console.log(Response);
+       // alert("sucess");
+      }
+      else{
+       alert("something went wrong at server");
+      }
 
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
+    });
 
-/* <![CDATA[ */
-var google_conversion_id = 1071863997;
-var google_conversion_language = "en";
-var google_conversion_format = "3";
-var google_conversion_color = "ffffff";
-var google_conversion_label = "YwhdCOff5AIQvbGN_wM";
-var google_conversion_value = 0;
-/* ]]> */
+  }
 
-
+  gottoHome() {
+    this.router.navigate(['']);
   }
 
 }

@@ -1,6 +1,3 @@
-.second_content h4{
-    font-family: 'Montserrat', sans-serif !important;
-}
 
 .seach input {
     width: 100%;
@@ -11,30 +8,8 @@
 section.m_bottom{
     margin-bottom: 30px;
 }
-
-/* .img_div{
-    margin-bottom: 10px;
-    text-align: center;
-  
-}
-.margin_bottom{
-    border: 2px solid #d7d7d7;
-    min-height: 110px;
-    text-align: center;
-    border-radius: 5px 5px 0 0;
-    height: 120px;
-}
-.margin_bottom .firimg{
-    width: 30px;
-    margin-right: 20px;
-}
-.margin_bottom .third_img{
-        width: 30px;
-    margin-left: 20px;
-}
-.margin_bottom img.second_img {
-    width: 35%;
-    height: 110px !important;
+/* .sidebar-menu .sidebar-submenu > li > a:active, .sidebar-menu .sidebar-submenu > li > a:focus {
+    color: #ec1c24 !important;
 } */
 .red_color{
     color: #ff0000;
@@ -60,54 +35,24 @@ select.form-control {
     margin-right: 5px;
 }
 
-.second_content{
-    border: 1px solid #d7d7d7;
-    border-top: none;
-    text-align: left;
-    padding: 10px;
-    min-height: 110px;
-    height: 110px;
-    margin-bottom: 28px;
-    border-radius: 0 0 5px 5px;
-}
-.second_content h4{
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-    font-size: 9px;
-}
-.second_content p.price{
-    color: #ec1c24;
-    font-weight: bold;
-    font-size: 11px;
-    margin: 0;
-}
-.second_content h4,.second_content h5{
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 9px;
-    font-weight: bold;
-    color: #262628;
-    margin: 0;
-}
-.second_content .rating_star i {
-    color: #ec1c24;
-}
-.second_content .rating_star i.last{
-    color: #ddd;
-}
-.second_content .rating_star span.first{
-    margin-left: 25px;
-}
-.text_transform {
-    text-transform:uppercase;
-    font-size: 11px;
-    font-weight: 600;
-    color: #bfbebe;
-    margin-top: 5px;
-}
 .margin_bottom_35 {
     margin-bottom: 35px;
 }
 
+/* .active{
+    color: #ec1c24 !important;
+} */
+/* ul.sidebar-menu li ul.sidebar-submenu > li > a{
+    color: #ec1c24 !important;   
+} */
+
+/* .sidebar-menu .sidebar-submenu > li > a:active,.sidebar-menu .sidebar-submenu > li > a:focus{
+    color: #ec1c24 !important;
+  }  */
+/* li.dropdown-btn .multiselect-dropdown span.dropdown-btn{
+    border-radius:0 !important;
+    border:none !important;
+} */
 
 @media screen and (min-width:320px) and (max-width:767px){
     footer, footer ul,.list-unstyled.clear-margins,.cards,.text_center {

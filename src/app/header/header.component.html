@@ -4,20 +4,49 @@
         <div class="header_div">
         <div class="row">
           <div class="col-md-4 col-lg-6 col-sm-4 col-xs-12">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand">
                   <img src="assets/Images/assets/logo.png" alt="Battlecapse" height="42" width="42">
                 </a>
           </div>
-          <div class="col-md-8 col-lg-6 col-sm-8 col-xs-12">
+          
+          <div class="col-md-8 col-lg-6 col-sm-8 col-xs-12 mobile_none">
             <ul class="float_right">
-              <li>
+            <ng-container *ngIf="userid!=0">  
+              <li class="text_small" [routerLink]="['/myaccount']">
+                <div class="header_icon">
                   <img src="assets/Images/assets/profile.png" alt="Battlecapse">
-                <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
-                <a href="">Hi There <span>Login/Register</span></a></li>
-              <li [routerLink]="['/cart']">
+                 </div>
+                  <a class="username">{{username}}</a>
+                </li> 
+            </ng-container> 
+
+                   <ng-container *ngIf ="userid==0">  
+                    <li class="text_small" [routerLink]="['/login']">
+                        <div class="header_icon">
+                        <img src="assets/Images/assets/profile.png" alt="Battlecapse">
+                    </div>
+                        <a class="username">{{username}}</a>
+                      </li> 
+                  </ng-container>  
+            <!-- <li class="text_small" [routerLink]="['/login']">
+                <img src="assets/Images/assets/profile.png" alt="Battlecapse">
+                <a class="username">{{username}}</a>
+              </li>   -->
+                  
+                <li [routerLink]="['/cart']"> 
+                    <div class="header_icon">
                 <img src="assets/Images/assets/cart.png" alt="Battlecapse" >
-                <!-- <i class="fa fa-shopping-cart" aria-hidden="true"></i> -->
-                <a>Shopping Cart <span>3 Item (s)- $578.14</span></a></li>
+             </div>
+                <a>Shopping Cart</a>
+              <span class="cart">{{custermerinfo}} Item (s)</span> 
+              <!-- <ng-container *ngIf="custermerinfo <=1">  
+              <span class="cart">{{custermerinfo}} Item </span>
+              </ng-container>
+              <ng-container *ngIf="custermerinfo >=1">  
+                    <span class="cart">{{custermerinfo}} Item (s)</span>
+                    </ng-container>  -->
+                </li>
+
             </ul>
             </div>
         </div>
@@ -27,58 +56,71 @@
     <nav class="navbar bg_color default" id="menu">
         <div class="container">       
             <div class="row"> 
-              <div class=" col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                  <!-- <ul class="nav navbar-nav navbar-right display_none">
-                      <li> 
-                        <div class="input-group">
-                          <input type="text" class="form-control" placeholder="Search..">
+             
+                  <div class="navbar-header">
+                      <div class="input-group display_none col-md-12 col-lg-12 col-sm-8 col-xs-9">
+                          <input type="text" class="form-control search" id="myId" placeholder="Search..">
                          
                             <button type="button" class="btn btn-primaray">
                                 <img src="assets/Images/assets/search.png">
                             </button>
                         </div>
-                      </li>
-                     
-                    </ul> -->
-                  <div class="navbar-header">
+                        <div class="col-md-12 col-lg-12 col-sm-8 col-xs-3">
                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span> 
                       </button>
-                       <!-- <a class="navbar-brand logo_logo" href="#"> <img _ngcontent-c2="" alt="Battlecapse" height="42" width="42" src="assets/Images/assets/logo.png"></a> -->
-                     
+                      </div>
+                        <a class="navbar-brand logo_logo" href="#"> <img _ngcontent-c2="" alt="Battlecapse" height="42" width="42" src="assets/Images/assets/logo.png"></a> 
                       </div>
                 <div class="collapse navbar-collapse" id="myNavbar">    
-          <ul class="nav navbar-nav main_ul">
-            <!-- <li class="" *ngFor="let link of mainlinks"><a >{{link.linkname}}</a></li> -->
-            <li class=""><a [routerLink]="['/']">Home</a></li>
-            <li class="" ><a [routerLink]="['/about']">About</a></li>
-            <li class="" ><a [routerLink]="['/checkout']">Deals</a></li> 
-            <li class="" ><a [routerLink]="['/popup']">popup</a></li>   
-            <li class="" ><a (click)="onclick(1)">Beer</a></li>
-            <li class="" ><a (click)="onclick(2)">Liquor</a></li>
-            <li class="" ><a (click)="onclick(3)">Wine</a></li>
-            <li class="" ><a (click)="onclick(4)"> Mixers & More</a></li>
-            <li class="" ><a [routerLink]="['/recipes']">Recipes</a></li>
+                    <!-- <ul class="nav navbar-nav main_ul">
+                        <li (ngClass)="active ? 'active': 'unactive'" *ngFor="let link of mainlinks" [routerLink]="link.urlpath"><a >{{link.linkname}}</a></li>
+                        </ul> -->
+         <ul class="nav navbar-nav" id="main_ul"> 
+            <li [routerLink]="['/']"><a class="active">Home</a></li>
+            <li [routerLink]="['/about']"><a>About</a></li>
+            <li [routerLink]="['/']"><a>Feature Products</a></li> 
+            <li><a (click)="onclick(1)">Beer</a></li>
+            <li><a (click)="onclick(2)">Liquor</a></li>
+            <li><a (click)="onclick(3)">Wine</a></li>
+            <li><a (click)="onclick(4)"> Mixers & More</a></li>
+            <li [routerLink]="['/recipes']"><a>Recipes</a></li>
+         </ul>
+            <ul class="float_right">
+            <li class="display_mobile">
+                <img src="assets/Images/assets/profile.png" alt="Battlecapse">
+             <a (click)="userlogin()"><span>{{username}}</span></a> 
+              <!-- <a [routerLink]="['/login']">Hi <span>Login/Register</span></a> -->
+              <h6 #logout style="display: none">LogOut</h6> 
+            </li>
+            <li class="display_mobile" [routerLink]="['/cart']">
+              <img src="assets/Images/assets/cart.png" alt="Battlecapse" >
+              <a>Shopping Cart </a>
+              <span>{{custermerinfo}} Item (s)</span>
+            </li>
           </ul>
-          <!-- <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12 padding_left"> -->
-          <ul class="nav navbar-nav navbar-right">
-              <li> <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search..">
-                 
-                    <button type="button" class="btn btn-primaray">
+                <!-- <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12 padding_left"> -->
+          <ul class="nav navbar-nav navbar-right mobile_none">
+              <li> 
+                  <form [formGroup]=searchform (ngSubmit)="searchcproduct()">
+                      <div class="input-group">
+                  <input type="text" class="form-control"  formControlName="search" placeholder="Search..">
+
+                    <button type="submit" class="btn btn-primaray">
                         <img src="assets/Images/assets/search.png">
                     </button>
                   <!-- </div> -->
                 </div>
+                       </form>
               </li>
              
             </ul>
           </div>
           </div>
         </div>
-      </div>
+    
       </nav>
      
 </header>

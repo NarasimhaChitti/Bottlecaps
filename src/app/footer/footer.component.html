@@ -8,46 +8,71 @@
                        <img src="assets/Images/foorterlogo.png" alt="Battlecapse">
                     </a>
                     <div class="margin_left">
-                    <!-- <address>
-                           <h4 class="font_weight">Store Name </h4>  
-                          <p><span>
-                              <img src="assets/Images/assets/location.png">
-                        </span>
-                        <span class="font_weight">Store No</span></p>,
-                        <p><span class="Buildig"> Buildig Nmae</span></p>
-                          <h5 class="Buildig">Road Name</h5> 
-                         <p><span class="address">,Address</span></p> 
-                           <h5 class="margin_right">City, Zip Code</h5>
-                         
-                    </address> -->
-                    <address>
-                        Store Name<br> 
-                        <img class="location"src="assets/Images/assets/location.png">Store No<br>
-                        Buildig Name<br>
-                        Road Name<br>
-                        Address<br>
-                        City, Zip Code<br>
-                        <img class="contact" src="assets/Images/assets/contact.png">  Call: 0703971400<br>
-                        <img class="email" src="assets/Images/assets/email.png"> Email: info@company.com
-                        </address>
-               
+                     
+                     <address class="storelocation">
+                       <!-- <span class="storename">{{storegetList.StoreName}}</span><br><br> -->
+                        <img class="location"src="assets/Images/assets/location.png">{{storegetList.Location}}<br>
+                       <span>Building Name</span> <br><br>
+                       <!-- <ng-container *ngFor="let storegetList of storegetList"> -->
+                      <span> {{storegetList.Address1}}</span><br><br><br>
+                        <span>{{storegetList.City}},{{storegetList.State}}</span><br><br>
+                        <div class="contact_text">
+                        <img class="contact" src="assets/Images/assets/contact.png"><span class="call"> Call: {{storegetList.Phone}}</span> <br><br>
+                    </div>
+                    <div>
+                        <img class="email" src="assets/Images/assets/email.png"> <span class="call">Email: {{storegetList.StoreEmail}}</span>
+                    </div>
+                <!-- </ng-container> -->
+                    </address> 
+                
                         </div>
             </div>
             <div class="accounts col-lg-2 col-md-2 col-sm-2 col-xs-6 item_img">
                 <h4 class="font_size">Accounts</h4>
                 <ul class="list-unstyled clear-margins">
-                <li *ngFor="let accountname of Accountname">
-                     <a href="#">{{accountname.name}}</a>
-                    </li>
-                 </ul>
+                <!-- <li *ngFor="let accountname of Accountname"><a>{{accountname.name}}</a></li> -->
+               <ng-container *ngIf="userid!=0">
+                <li><a [routerLink]="['/myorders']">My Orders</a></li>
+            </ng-container>
+            <ng-container *ngIf="userid==0">
+             <li><a [routerLink]="['/login']">My Orders</a></li>
+            </ng-container>
+           <ng-container *ngIf="userid!=0">
+                <li><a [routerLink]="['/myaccount']" [queryParams]="{'id':1}">My Payment method</a></li>
+            </ng-container>    
+            <ng-container *ngIf="userid==0">
+                    <li><a [routerLink]="['/login']" >My Payment method</a></li>
+                </ng-container>
+                <ng-container *ngIf="userid!=0">  
+                <li><a [routerLink]="['/myaccount']" [queryParams]="{'id':2}">My Address</a></li> 
+                </ng-container>
+                <ng-container *ngIf="userid==0">  
+                        <li><a [routerLink]="['/login']">My Address</a></li> 
+                        </ng-container>
+                 <ng-container *ngIf="userid!=0">         
+                <li><a [routerLink]="['/myaccount']" [queryParams]="{'id':3}">My Personal Info</a></li>
+                </ng-container>
+                <ng-container *ngIf="userid==0">         
+                 <li><a [routerLink]="['/login']" >My Personal Info</a></li>
+               </ng-container>
+            </ul>
             </div>
             <div class="information col-lg-2 col-md-2 col-sm-2 col-xs-6 item_img">
-                    <h4 class="font_size">Information</h4>
+               <h4 class="font_size">Information</h4>
                 <ul class="list-unstyled clear-margins">
-         <li *ngFor="let informationtname of Information" >
-              <a href="#">{{informationtname.name}}</a>
-            </li>
-               </ul>
+            <!-- <li *ngFor="let informationtname of Information">
+                <a>{{informationtname.name}}</a>
+            </li> -->
+            
+             <li><a (click)="Gotoproduct(1)">Beer</a></li>
+             <li><a (click)="Gotoproduct(2)">Liquor</a></li>
+             <li><a (click)="Gotoproduct(3)">Wine</a></li> 
+             <li><a (click)="Gotoproduct(4)">Mixers & More</a></li>
+             <li><a [routerLink]="['/']">Deals</a></li>
+             <li><a [routerLink]="['/']">New Products</a></li>
+             <li><a [routerLink]="['/']">Best Sellers</a></li> 
+             <li><a [routerLink]="['/']">Our Stores</a></li> 
+            </ul>
             </div>
             <!-- widgets column left end -->
 
@@ -55,15 +80,17 @@
             <div class="about col-lg-2 col-md-2 col-sm-2 col-xs-6 item_img">
                     <h4 class="font_size">About</h4>
                 <ul class="list-unstyled clear-margins">
-                           <li *ngFor="let about of About"> <a href="#">{{about.name}}</a></li>
-                       </ul>
+            <!-- <li *ngFor="let about of About"> <a>{{about.name}}</a></li> -->
+            <li><a [routerLink]="['/']">Deals</a></li>
+            <li><a [routerLink]="['/']">New Products</a></li> 
+            </ul>
             </div>
 
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 item_img">
                     <h3 class="Subscribe">Subscribe Newsletter</h3>
                 <p class="newslatter">Enter your email address for our mailing list to keep yourself updated</p>
                 <div class="input-group subscribe">
-                    <input type="text" class="form-control" placeholder="Search..">
+                    <input type="text" class="form-control" id="myid" placeholder="ENTER EMAIL ADDRESS ">
                     <!-- <div class="input-group-append"> -->
                       <button type="button" class="btn btn-primaray">
                           <img src="assets/Images/assets/send.png">
@@ -71,7 +98,7 @@
                     <!-- </div> -->
                   </div>
                   <div class="cards">
-                        <ul>
+                          <ul>
                                 <li> <img src="assets/Images/assets/paypal.png"></li>
                                  <li><img src="assets/Images/assets/mastercard.png"></li>
                                  <li> <img src="assets/Images/assets/visa.png"></li>
@@ -81,7 +108,7 @@
                   </div>
             </div>
             <div>
-            <a href="#" class="scrollToTop">
+            <a class="scrollToTop">
                 <i class="fa fa-arrow-up" aria-hidden="true"></i>
             </a>
         </div>
@@ -130,7 +157,7 @@
                             </a>
                     </li>
                    
-                    <li>
+                        <li>
                             <a href="#" class="instagram" title="instagram">
                             <!-- <i class="fa fa-instagram" aria-hidden="true"></i> -->
                             <img src="assets/Images/assets/Insta.png">
